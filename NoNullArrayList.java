@@ -5,19 +5,20 @@ public NoNullArrayList(){
 super();}
 
 public NoNullArrayList(int startingCapacity){
-super(int startingCapacity);
+super(startingCapacity);
 }
 
-public void set (int index, T value){
+public T set (int index, T value){
 if (value == null)
 throw new IllegalArgumentException("error");
-super.set(index, value);
+return super.set(index, value);
 }
 
 public boolean add(T value){
 if (value == null)
 throw new IllegalArgumentException("error");
-return 
+{super.add(value);
+return true;}
 }
 
 
@@ -25,4 +26,4 @@ public void add (int index, T value){
 if (value == null)
 throw new IllegalArgumentException("error");
 super.add(index, value);
-}
+}}
