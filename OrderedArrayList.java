@@ -14,6 +14,10 @@ add(value);
 }
 
 public boolean add(T value){
+for (int i = 0; i < size(); i++)
+if(value.compareTo(get(i)) < 0){
+add(i, value);
+}
 
 return true;
 }
