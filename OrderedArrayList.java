@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T>{
+public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T>{
 public OrderedArrayList(){
 super();
 }
@@ -14,10 +14,7 @@ add(value);
 }
 
 public boolean add(T value){
-for (int i = 0; i < size(); i ++)
-if(get(i).compareTo(value) < 0){
-super.add(i, value);
-}
+
 return true;
 }
 
